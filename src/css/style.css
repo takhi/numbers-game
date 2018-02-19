@@ -1,0 +1,87 @@
+div.board {
+    background: linear-gradient(90deg, #bec7c4 20px, transparent 1%) center, linear-gradient(#bec7c4 20px, transparent 1%) center, lightgray;
+    background-size: 22px 22px;
+    padding: 50px;
+}
+
+div.number {
+    display: inline-block;
+    height: 100px;
+    width: 140px;
+    text-align: center;
+    border: solid 4px #66a2ac;
+    background-color: #4a629a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px; /*100px*/
+    color: white;
+}
+
+div.number.target {
+    background-color: #0f369d;
+    width: 200px;
+    margin: 20px 0;
+}
+
+button.numberPack {
+    background-color: lightgray;
+    border: solid 2px white;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    margin-right: 3px;
+    margin-top: 5px;
+}
+
+button.numberPack:hover {
+    background-color: lightsalmon;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    border: none;
+}
+
+button.target {
+    background: linear-gradient(to bottom, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+    margin-left: 600px;
+}
+
+button.solve {
+    background: linear-gradient(to bottom, rgba(191,210,85,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(158,203,45,1) 100%);
+    float: right;
+    margin: 20px;
+}
+
+div.whiteBoard {
+    background-color: lightcyan;
+    background-image: linear-gradient(0deg, transparent 24%, lightgray 25%, lightgray 26%, transparent 27%, transparent 74%, lightgray 75%, lightgray 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, lightgray 25%, lightgray 26%, transparent 27%, transparent 74%, lightgray 75%, lightgray 76%, transparent 77%, transparent);
+    height: 800px;
+    background-size:50px 50px;
+    border: solid 4px #66a2ac;
+    font-family: 'Zeyada', cursive;
+    font-size: 70px;
+}
+
+div.solution {
+    padding: 0 20px;
+}
+
+@keyframes thinking {
+    from { background-color: #bec7c4 }
+    to { background-color: lightsalmon }
+}
+
+div.bar {
+    height: 8px;
+    margin-top: 20px;
+}
+
+div.thinking {
+    background-color: #4a629a;
+    height: 8px;
+    margin-top: 20px;
+    animation: thinking 1s infinite alternate;
+}
