@@ -23,9 +23,8 @@ export default class NumberList extends React.Component {
         super(props);
     }
     _createNumbers(numbers) {
-        let i = 0;
-        return numbers.map((number) => {
-            return <Number key={i++} value={number} />
+        return numbers.map((number, i) => {
+            return <Number key={i} value={number} />
         })
     }
     render() {
