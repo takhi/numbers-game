@@ -26,7 +26,7 @@ export default class WhiteBoard extends React.Component {
         let solutions = this._createSolutions(this.props.solutions);
         return ( 
             <div className="whiteBoard">
-                <button className="circle solve" onClick={this.props.onButtonClick}></button>
+                <button className="circle solve" onClick={this.props.onButtonClick} title="solution"></button>
                 <div>{solutions}</div>
             </div>
         );

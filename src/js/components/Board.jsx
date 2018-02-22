@@ -44,15 +44,25 @@ export default class Board extends React.Component {
         return (
             <div className="board">
                 <Number isTarget="true" value={this.state.target}/>
-                <button className="circle target" onClick={this._setTarget}></button>
+                <button className="circle target" onClick={this._setTarget} title="target"></button>
                 <NumberList numbers={this.state.numbers} />            
                 <br/><br/>
                 <div>
-                    <button className="numberPack" onClick={()=>this._setNumbers(0)}>{NumberList.NUM_PACK[0]}</button>
-                    <button className="numberPack" onClick={()=>this._setNumbers(1)}>{NumberList.NUM_PACK[1]}</button>
-                    <button className="numberPack" onClick={()=>this._setNumbers(2)}>{NumberList.NUM_PACK[2]}</button>
-                    <button className="numberPack" onClick={()=>this._setNumbers(3)}>{NumberList.NUM_PACK[3]}</button>
-                    <button className="numberPack" onClick={()=>this._setNumbers(4)}>{NumberList.NUM_PACK[4]}</button>
+                    <button className="numberPack" onClick={()=>this._setNumbers(0)} title="0 Large 6 smalls">
+                        {NumberList.NUM_PACK[0]}
+                    </button>
+                    <button className="numberPack" onClick={()=>this._setNumbers(1)} title="1 Large 5 smalls">
+                        {NumberList.NUM_PACK[1]}
+                    </button>
+                    <button className="numberPack" onClick={()=>this._setNumbers(2)} title="2 Large 4 smalls">
+                        {NumberList.NUM_PACK[2]}
+                    </button>
+                    <button className="numberPack" onClick={()=>this._setNumbers(3)} title="3 Large 3 smalls">
+                        {NumberList.NUM_PACK[3]}
+                    </button>
+                    <button className="numberPack" onClick={()=>this._setNumbers(4)} title="4 Large 2 smalls">
+                        {NumberList.NUM_PACK[4]}
+                    </button>
                 </div>
                 <div className={this.state.isThinking ? "thinking" : "bar"}></div>
                 <WhiteBoard solutions={this.state.solutions} onButtonClick={this._getSolutions} />
